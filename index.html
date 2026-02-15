@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>B.Com Semester 6 Resources</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            background-color: #f2f2f2;
+        }
+
+        header {
+            background-color: #1f4fa3;
+            color: white;
+            padding: 20px;
+        }
+
+        .course-buttons button {
+            margin: 10px;
+            padding: 10px 20px;
+            border: none;
+            background-color: #1f4fa3;
+            color: white;
+            cursor: pointer;
+            border-radius: 5px;
+        }
+
+        .course-buttons button:hover {
+            background-color: #163d7a;
+        }
+
+        #content {
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <h1>B.Com Semester 6 Study Resources</h1>
+    <p>Select Course to View Subjects</p>
+</header>
+
+<div class="course-buttons">
+    <button onclick="loadCourse('general')">B.Com General</button>
+    <button onclick="loadCourse('honors')">B.Com Honors</button>
+    <button onclick="loadCourse('computer')">Computer Applications</button>
+    <button onclick="loadCourse('analytics')">Business Analytics</button>
+</div>
+
+<div id="content"></div>
+
+<script>
+function loadCourse(course) {
+    let content = document.getElementById("content");
+
+    if (course === "general") {
+        content.innerHTML = `
+            <h2>B.Com General Subjects</h2>
+            <ul>
+                <li>Financial Management</li>
+                <li>Income Tax</li>
+                <li>Auditing</li>
+                <li>Cost Accounting</li>
+            </ul>
+        `;
+    }
+
+    if (course === "honors") {
+        content.innerHTML = `
+            <h2>B.Com Honors Subjects</h2>
+            <ul>
+                <li>Advanced Accounting</li>
+                <li>Corporate Tax Planning</li>
+                <li>Strategic Management</li>
+            </ul>
+        `;
+    }
+
+    if (course === "computer") {
+        content.innerHTML = `
+            <h2>Computer Applications Subjects</h2>
+            <ul>
+                <li>Database Management</li>
+                <li>Web Development</li>
+                <li>Data Structures</li>
+            </ul>
+        `;
+    }
+
+    if (course === "analytics") {
+        content.innerHTML = `
+            <h2>Business Analytics Subjects</h2>
+            <ul>
+                <li>Data Visualization</li>
+                <li>Machine Learning Basics</li>
+                <li>Business Intelligence</li>
+            </ul>
+        `;
+    }
+}
+</script>
+
+</body>
+</html>
